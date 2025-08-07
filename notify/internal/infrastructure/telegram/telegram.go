@@ -6,7 +6,7 @@ import (
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 	"github.com/spf13/viper"
 
-	"github.com/shortlink-org/shortlink/boundaries/notification/notify/internal/domain/events"
+	"github.com/shortlink-org/notification/notify/internal/domain/events"
 	"github.com/shortlink-org/shortlink/pkg/notify"
 )
 

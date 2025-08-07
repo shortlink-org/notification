@@ -8,8 +8,8 @@ import (
 	"github.com/segmentio/encoding/json"
 	"github.com/spf13/viper"
 
-	"github.com/shortlink-org/shortlink/boundaries/notification/notify/internal/domain/events"
-	"github.com/shortlink-org/shortlink/boundaries/notification/notify/internal/infrastructure"
+	"github.com/shortlink-org/notification/notify/internal/domain/events"
+	"github.com/shortlink-org/notification/notify/internal/infrastructure"
 	http_client "github.com/shortlink-org/shortlink/pkg/http/client"
 	"github.com/shortlink-org/shortlink/pkg/notify"
 )

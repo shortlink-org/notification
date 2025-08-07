@@ -6,7 +6,7 @@ import (
 
 	"github.com/spf13/viper"
 
-	"github.com/shortlink-org/shortlink/boundaries/notification/notify/internal/domain/events"
+	"github.com/shortlink-org/notification/notify/internal/domain/events"
 	"github.com/shortlink-org/shortlink/pkg/notify"
 )
 

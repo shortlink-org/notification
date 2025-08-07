@@ -1,4 +1,4 @@
-//go:generate wire
+//go:generate go tool wire
 //go:build wireinject
 
 // The build tag makes sure the stub is not built in the final build.
@@ -12,12 +12,12 @@ import (
 	"go.opentelemetry.io/otel/trace"
 
 	"github.com/shortlink-org/shortlink/pkg/mq"
-	"github.com/shortlink-org/shortlink/pkg/observability/monitoring"
+	"github.com/shortlink-org/shortlink/pkg/observability/metrics"
 
-	"github.com/shortlink-org/shortlink/boundaries/notification/notify/internal/application"
-	"github.com/shortlink-org/shortlink/boundaries/notification/notify/internal/infrastructure/slack"
-	"github.com/shortlink-org/shortlink/boundaries/notification/notify/internal/infrastructure/smtp"
-	"github.com/shortlink-org/shortlink/boundaries/notification/notify/internal/infrastructure/telegram"
+	"github.com/shortlink-org/notification/notify/internal/application"
+	"github.com/shortlink-org/notification/notify/internal/infrastructure/slack"
+	"github.com/shortlink-org/notification/notify/internal/infrastructure/smtp"
+	"github.com/shortlink-org/notification/notify/internal/infrastructure/telegram"
 	"github.com/shortlink-org/shortlink/pkg/di"
 	"github.com/shortlink-org/shortlink/pkg/di/pkg/autoMaxPro"
 	"github.com/shortlink-org/shortlink/pkg/di/pkg/config"
@@ -35,7 +35,7 @@ type Service struct {
 
 	// Observability
 	Tracer        trace.TracerProvider
-	Monitoring    *monitoring.Monitoring
+	Monitoring    *metrics.Monitoring
 	PprofEndpoint profiling.PprofEndpoint
 
 	// Bot
@@ -109,7 +109,7 @@ func NewBotService(
 	autoMaxProcsOption autoMaxPro.AutoMaxPro,
 
 	// Observability
-	monitoring *monitoring.Monitoring,
+	metrics *metrics.Monitoring,
 	tracer trace.TracerProvider,
 	pprofHTTP profiling.PprofEndpoint,
 
@@ -128,7 +128,7 @@ func NewBotService(
 
 		// Observability
 		Tracer:        tracer,
-		Monitoring:    monitoring,
+		Monitoring:    metrics,
 		PprofEndpoint: pprofHTTP,
 		AutoMaxPro:    autoMaxProcsOption,
 

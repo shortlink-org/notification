@@ -8,7 +8,7 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-	"github.com/shortlink-org/shortlink/boundaries/notification/notify/internal/domain/events"
+	"github.com/shortlink-org/notification/notify/internal/domain/events"
 	"github.com/shortlink-org/shortlink/pkg/logger"
 	"github.com/shortlink-org/shortlink/pkg/mq"
 	"github.com/shortlink-org/shortlink/pkg/notify"
