@@ -8,7 +8,7 @@ require (
 	github.com/segmentio/encoding v0.5.3
 	github.com/shortlink-org/shortlink 7b4fecc8999c
 	github.com/spf13/viper v1.20.1
-	go.opentelemetry.io/otel/trace v1.37.0
+	go.opentelemetry.io/otel/trace v1.42.0
 	golang.org/x/sync v0.18.0
 )
 
