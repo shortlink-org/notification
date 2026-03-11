@@ -5,7 +5,7 @@ go 1.24.6
 require (
 	github.com/go-telegram-bot-api/telegram-bot-api/v5 v5.5.1
 	github.com/google/wire v0.7.0
-	github.com/segmentio/encoding v0.5.3
+	github.com/segmentio/encoding v0.5.4
 	github.com/shortlink-org/shortlink 7b4fecc8999c
 	github.com/spf13/viper v1.20.1
 	go.opentelemetry.io/otel/trace v1.37.0
